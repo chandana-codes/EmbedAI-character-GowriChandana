@@ -1,0 +1,39 @@
+.home-page-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #18181B;
+  color: #FAFAFA;
+}
+
+@media screen and (max-width: 768px){
+  .home-page-container{
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+
+.home-page-heading{
+  padding-left: 36px;
+  padding-bottom: 0px;
+}
+
+.try-these-list{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 36px;
+}
+
+.try-these-card{
+  background-color: #202024;
+  color: #FAFAFA;
+  padding: 8px;
+  margin: 5px;
+  width: 300px;
+  height: 100px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,16 +1,40 @@
 .create-character-container{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 14px;
+  background-color: #18181B;
+  color: #FAFAFA;
+  height: 100vh;
+  width: 80vw;
 }
 
 .create-character-form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 80%;
 }
 
 .character-input{
   margin: 5px 0px 5px 0px;
   padding: 12px;
   width: 80%;
+  background-color: #18181B;
+  color: #7C7C87;
+  border: 2px solid #3E3E44;
+  border-radius: 12px;
+  width: 80%;
+  margin: 20px 0px;
+}
+
+.create-character-btn{
+  width: 150px;
+  align-self: flex-end;
+  padding: 12px;
+  border: 0px;
+  color: #18181B;
+  background-color: #7C7C87;
+  border-radius: 16px;
 }

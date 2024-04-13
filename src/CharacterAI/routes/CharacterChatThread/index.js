@@ -1,22 +1,22 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
-import { botMessages } from "../../constants/botMessages";
+// import { botMessages } from "../../constants/botMessages";
 import CharacterChatMessageItem from "../../components/CharacterChatMessageItem";
 import CharacterChatInput from "../../components/CharacterChatInput";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./styles.css";
 
 // copied from https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function getRandomInt(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-function pickRandomMessages() {
-  const randomIndex = getRandomInt(0, botMessages.length - 1);
-  return botMessages[randomIndex] ?? botMessages[0];
-}
+// function pickRandomMessages() {
+//   const randomIndex = getRandomInt(0, botMessages.length - 1);
+//   return botMessages[randomIndex] ?? botMessages[0];
+// }
 
 function createNewMessage(messageContent) {
   return {
@@ -25,7 +25,7 @@ function createNewMessage(messageContent) {
     events: {
       sentAt: new Date(),
     },
-    messageContent: pickRandomMessages(),
+    messageContent: messageContent,
   };
 }
 
@@ -44,7 +44,7 @@ function ChatThreadContianer() {
   }, [id, characters]);
 
   const onNewMessage = (newMessage) => {
-    const updatedMessagesList = [newMessage, ...messages];
+    const updatedMessagesList = [...messages, newMessage];
     setMessages(updatedMessagesList);
     inputRef.current.focus();
   };

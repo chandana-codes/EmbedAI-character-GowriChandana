@@ -62,7 +62,9 @@ const CreateCharacterForm = ({ onCreate }) => {
           required
           className="character-input"
         />
-        <button type="submit">Create Character</button>
+        <button type="submit" className="create-character-btn">
+          Create Character
+        </button>
       </form>
     </div>
   );
