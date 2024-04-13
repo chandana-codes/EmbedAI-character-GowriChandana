@@ -1,0 +1,36 @@
+.input-container{
+  width: 60vw;
+  border: 2px solid #303136;
+  background-color: #202024;
+  height: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 24px;
+  padding: 12px 2px 12px 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  font-size: 16px;
+  flex-grow: 2;
+}
+
+.input-box{
+  flex: 1;
+  outline: none;
+  border: 0px;
+  background-color: transparent;
+  color: #7C7C87;
+  font-weight: 400;
+}
+
+.send-btn{
+  background-color: #FAFAFA;
+  align-self: center;
+  border: 0px;
+  border-radius: 24px;
+  height: 40px;
+  width: 40px;
+}
